@@ -1,0 +1,91 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"StatusBar\"><param name=\"android-package\" value=\"org.apache.cordova.statusbar.StatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"PhotoViewer\"><param name=\"android-package\" value=\"com.sarriaroman.PhotoViewer.PhotoViewer\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/manifest/application": [
+                        {
+                            "xml": "<activity android:name=\"com.sarriaroman.PhotoViewer.PhotoActivity\" android:theme=\"@android:style/Theme.Holo.NoActionBar.Fullscreen\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "delfyn.rng"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "delfyn.rng"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "delfyn.rng"
+        },
+        "com-sarriaroman-photoviewer": {
+            "PACKAGE_NAME": "delfyn.rng"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "id": "cordova-plugin-statusbar.statusbar",
+            "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+            "pluginId": "cordova-plugin-statusbar",
+            "clobbers": [
+                "window.StatusBar"
+            ]
+        },
+        {
+            "id": "com-sarriaroman-photoviewer.PhotoViewer",
+            "file": "plugins/com-sarriaroman-photoviewer/www/PhotoViewer.js",
+            "pluginId": "com-sarriaroman-photoviewer",
+            "clobbers": [
+                "PhotoViewer"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-console": "1.0.7",
+        "cordova-plugin-statusbar": "1.0.1",
+        "cordova-plugin-whitelist": "1.2.2",
+        "com-sarriaroman-photoviewer": "1.1.10"
+    }
+}

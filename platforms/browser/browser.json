@@ -1,0 +1,72 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "delfyn.rng"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "delfyn.rng"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "delfyn.rng"
+        },
+        "com-sarriaroman-photoviewer": {
+            "PACKAGE_NAME": "delfyn.rng"
+        },
+        "de-cyberkatze-ckopenimage": {
+            "PACKAGE_NAME": "delfyn.rng"
+        },
+        "boren-cordova-plugin-toast": {
+            "PACKAGE_NAME": "delfyn.rng"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+            "id": "cordova-plugin-statusbar.statusbar",
+            "pluginId": "cordova-plugin-statusbar",
+            "clobbers": [
+                "window.StatusBar"
+            ]
+        },
+        {
+            "file": "plugins/com-sarriaroman-photoviewer/www/PhotoViewer.js",
+            "id": "com-sarriaroman-photoviewer.PhotoViewer",
+            "pluginId": "com-sarriaroman-photoviewer",
+            "clobbers": [
+                "PhotoViewer"
+            ]
+        },
+        {
+            "file": "plugins/de-cyberkatze-ckopenimage/www/CkOpenImage.js",
+            "id": "de-cyberkatze-ckopenimage.CkOpenImage",
+            "pluginId": "de-cyberkatze-ckopenimage",
+            "clobbers": [
+                "CkOpenImage"
+            ]
+        },
+        {
+            "file": "plugins/boren-cordova-plugin-toast/www/toast.js",
+            "id": "boren-cordova-plugin-toast.toast",
+            "pluginId": "boren-cordova-plugin-toast",
+            "merges": [
+                "navigator.toast"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-whitelist": "1.2.2",
+        "cordova-plugin-console": "1.0.7",
+        "cordova-plugin-statusbar": "1.0.1",
+        "com-sarriaroman-photoviewer": "1.1.10",
+        "de-cyberkatze-ckopenimage": "1.1.0",
+        "boren-cordova-plugin-toast": "0.2.0"
+    }
+}
